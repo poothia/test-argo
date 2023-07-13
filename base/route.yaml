@@ -1,1 +1,13 @@
-
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: nginx5
+  namespace: hpapoc
+  labels: {}
+spec:
+  to:
+    kind: Service
+    name: nginx5
+  tls: null
+  port:
+    targetPort: 80
